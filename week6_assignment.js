@@ -5,11 +5,10 @@
 //-	Deal 26 Cards to two Players from a Deck. 
 //-	Iterate through the turns where each Player plays a Card
 //-	The Player who played the higher card is awarded a point
-//o	Ties result in zero points for either Player
+//	Ties result in zero points for either Player
 //-	After all cards have been played, display the score.
 
 import Deck from './deck.js'
 
-const deck = new Deck ()
-deck.shuffle()
+const deck = new Deck()
 console.log(deck.cards)

@@ -1,5 +1,5 @@
 //add sutes and values of all cards//
-const SUITS = ['♥', '♦' ,' ♠', '♣']
+const SUITS = ['♥', '♦' ,'♠', '♣']
 const VALUES= ['A', '2', '3', '4','5','6','7','8','9','10','J', 'Q', 'K']
 
 //c: Deck-creates the fresh deck of cards within the class Deck//
@@ -28,13 +28,25 @@ class Card {
         this.suit = suit
         this.value = value
     }
+
+    get color() {//selects the color of the card suit
+        return this.suit ==='♦' || this.suit === '♠' ? 'black': 'red'
+    }
+    //c:Deck-creates our card
+   getHTML(){
+         const cardDiv = document.createElement('div')
+         cardDiv.innerText =this.suit
+         cardDiv.classList.add('card', this.color)
+         cardDiv.dataset.value =`${this.value} ${this.suit}`
+         return cardDiv
+    }
 }
 
 //c:Deck -creates fresh deck of cards with each suite and value//
-function freshDeck() {
-    return SUITS.flatMap(suit => {
-        return VALUES.map(value=> {
-            return new Card(suit, value)
-        })
-    })
-}
+    function freshDeck() {
+        return SUITS.flatMap(suit => {
+            return VALUES.map(value=> {
+             return new Card(suit, value)
+             })
+         })
+    }

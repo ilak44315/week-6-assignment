@@ -33,20 +33,21 @@ body {
 }
 
 .text {
-    grid-column:span 2;
+    grid-column: span 2;
     display: flex;
-    justify-content:center;
-    align-items:center;
+    justify-content: center;
+    align-items: center;
 }
 .card {
-position:relative;
-height:100%;
+position: relative;
+height: 100%;
 width: 100%;
 border: 1px solid black;
+border-radius: .5rem;
 display: flex;
-justify-content:center;
-align-items:center;
-font-size:4rem;
+justify-content: center;
+align-items: center;
+font-size: 4rem;
 }
 .card.aqua{
     color:aqua
@@ -54,7 +55,6 @@ font-size:4rem;
 .card.purple{
     color:blueviolet
 }
-
 .card::before,
 .card::after{
     position: absolute;
@@ -62,11 +62,11 @@ font-size:4rem;
     font-size: 1rem;
 }
 .card::before{
-    top:.5rem;
+    top: .5rem;
     left: .5rem;
 }
 .card::after {
-    top:.5rem;
-    left: .5rem;
-    transform: rotate(180deg)/*flips card over*/
+    bottom:.5rem;
+    right: .5rem;
+    transform: rotate(180deg);/*flips card over*/
 }

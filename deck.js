@@ -12,6 +12,12 @@ export default class Deck {
         return this.cards.length
     }
     
+    pop() {
+        return this.cards.shift() //shift returns first element pop returns bottom
+    }
+    push(card) {
+        this.cards.push(card)
+    }
     //c:Deck-shuffles the cards to a random number
     shuffle() {
         for (let i = this.numberOfCards -1; i > 0; i--) {

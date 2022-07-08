@@ -49,11 +49,11 @@ justify-content: center;
 align-items: center;
 font-size: 4rem;
 }
-.card.aqua{
-    color:aqua
+.card.red{
+    color:red;
 }
-.card.purple{
-    color:blueviolet
+.card.black{
+    color:black;
 }
 .card::before,
 .card::after{

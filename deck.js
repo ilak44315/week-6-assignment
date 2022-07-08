@@ -30,12 +30,15 @@ class Card {
     }
 
     get color() {//selects the color of the card suit
-        return this.suit ==='♦' || this.suit === '♠' ? 'black': 'red'
+        return this.suit ==='♣' || this.suit === '♠' ? 'black' : 'red'
     }
     //c:Deck-creates our card
-   getHTML(){
+    // <div class="card red" data-value="9 ♥">
+    //♥
+    //</div>//inside of class so it knows its a function//
+   getHTML() {
          const cardDiv = document.createElement('div')
-         cardDiv.innerText =this.suit
+         cardDiv.innerText = this.suit
          cardDiv.classList.add('card', this.color)
          cardDiv.dataset.value =`${this.value} ${this.suit}`
          return cardDiv
